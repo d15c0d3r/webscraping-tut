@@ -23,9 +23,9 @@ for job in jobs:
         skills_str = ', '.join(skills).strip()
         #print(skills)
 
-        print(f'''
-            Company Name     : {company_name}
-            Skills Required  : {skills_str}
-        ''')
+        more_info = job.header.h2.a['href']
+        print(f"Company Name: {company_name}")
+        print(f"Skills Required: {skills_str}")
+        print(f"More Info: {more_info}",end = '\n\n')     
 
 
