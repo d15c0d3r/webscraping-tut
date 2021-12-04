@@ -13,8 +13,21 @@ import requests
 # z = encoded_img[encoded_img.find(b'/9'):]
 # img = Image.open(io.BytesIO(base64.b64decode(z))).save('result.jpg')
 
-img_url = "https://i.stack.imgur.com/NfIXr.jpg"
-r = requests.get(img_url)
-print(r.content)
-with open('download1.jpg','wb') as f:
-    f.write(r.content)
+# img_url = "https://i.stack.imgur.com/NfIXr.jpg"
+# r = requests.get(img_url)
+# print(r.content)
+# with open('download1.jpg','wb') as f:
+#     f.write(r.content)
+
+#get request with params
+url = 'https://httpbin.org/get'
+payload = {'page' : 2, 'count' : 25}
+r = requests.get(url, params = payload)
+#print(r.text)
+
+#post request with data
+url = 'https://httpbin.org/post'
+payload = {'username' : 'naga', 'password' : 'testing'}
+r = requests.post(url, data = payload)
+res  = r.json()
+print(res['form'])
