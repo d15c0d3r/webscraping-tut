@@ -15,7 +15,6 @@ with open(f'{skill}jobs.csv','w',encoding = 'utf8',newline = '') as f:
     thewriter = writer(f)
     headers = ['Company','Skills','MoreInfo']   #headings of each column
     thewriter.writerow(headers)
-    
     for job in jobs:
         #print(job.text,end = '\n')
         publish_date = job.find('span',class_ = 'sim-posted').text.strip()
