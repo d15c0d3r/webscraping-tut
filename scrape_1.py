@@ -1,7 +1,9 @@
 from bs4 import BeautifulSoup
 import requests
 
-html_text = requests.get('https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=python&txtLocation=').text
+skill = input('enter the skill by which filteration of jobs to be done \n>')
+url = f'https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords={skill}&txtLocation='
+html_text = requests.get(url).text
 #print(html_text)
 
 soup = BeautifulSoup(html_text,'lxml')
