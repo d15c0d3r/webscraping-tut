@@ -1,3 +1,3 @@
 - requests in py
 - scraping
-- reading and writing into csv files
+- reading csv files
