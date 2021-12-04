@@ -31,3 +31,4 @@ payload = {'username' : 'naga', 'password' : 'testing'}
 r = requests.post(url, data = payload)
 res  = r.json()
 print(res['form'])
+
